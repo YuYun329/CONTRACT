@@ -191,7 +191,7 @@ def train(args):
     return model
 
 
-def integration(args, model, atac_data, rna_data):
+def integration(model, atac_data, rna_data):
     source_feature = model.get_embedding()[0].detach().cpu().numpy()
     target_feature = model.get_embedding()[1].detach().cpu().numpy()
     feature_vec = np.concatenate([source_feature, target_feature], axis=0)
@@ -218,14 +218,14 @@ def integration(args, model, atac_data, rna_data):
         palette=sns.color_palette(
             "husl", np.unique(adata.obs["cell_type"].values).size
         ),
-        save=os.path.join(args.outdir, "_cellType.png"),
+        save="_cellType.png",
         show=False,
     )
     sc.pl.umap(
         adata,
         color=["domain"],
         palette=sns.color_palette("hls", 2),
-        save=os.path.join(args.outdir, "_domain.png"),
+        save="_domain.png",
         show=False,
     )
     return adata, model
