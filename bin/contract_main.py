@@ -37,4 +37,4 @@ def main():
         atac_impute, rna_impute = impute(args, model)
         adata_integrate.obsm['atac_impute'] = atac_impute
         adata_integrate.obsm['rna_impute'] = rna_impute
-    adata_integrate.write_h5ad(os.path.join(args.our), "adata-integrate.h5ad")
+    adata_integrate.write_h5ad(os.path.join(args.outdir, "adata-integrate.h5ad"))
