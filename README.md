@@ -1,6 +1,7 @@
 [![Stars](https://img.shields.io/github/stars/YuYun329/CONTRACT?logo=GitHub&color=yellow)](https://github.com/YuYun329/CONTRACT/stargazers)
 # [Research on deep learning-based integration of single-cell multi-omics data and inference of regulation networks]
 
+![主图](/architecture/main.png)
 
 ## News
 #### [2024-05-23] CONTRACT第一代版本构建完成
