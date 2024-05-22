@@ -35,7 +35,7 @@ def main():
     ATAC_ad = anndata.read_h5ad(os.path.join(args.data_folder, "ATAC") + "/ad.h5ad")
     RNA_ad = anndata.read_h5ad(os.path.join(args.data_folder, "RNA") + "/ad.h5ad")
 
-    adata_integrate, model = integration(args, model, ATAC_ad, RNA_ad)
+    adata_integrate, model = integration(model, ATAC_ad, RNA_ad)
 
     if args.impute:
         atac_impute, rna_impute = impute(args, model)
