@@ -16,7 +16,7 @@ install the latest develop version
 or git clone and install
 
     pip install git+https://github.com/YuYun329/contract.git
-    cd scContract
+    cd CONTRACT
     python setup.py install
     
 
