@@ -35,7 +35,7 @@ contract可以根据一下步骤完成执行
 其中`--ad_file`表示传入的数据文件，`--input_fasta`表示基因坐标参考文件，`--out_path`表示输出的保存路径
 ### 2. 训练模型
 
-    contract_main.py --data_folder "./processed/" --outdir "output"
+    python contract_main.py --data_folder "./processed/" --outdir "output"
     
     
 `--data_folder`: 数据预处理步骤的输出路径，其下应有一个“ATAC”与一个“RNA”目录
